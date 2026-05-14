@@ -48,3 +48,17 @@ hr {
     border: 0;
     border-top: 1px solid #ccc;
 }
+
+slider {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
