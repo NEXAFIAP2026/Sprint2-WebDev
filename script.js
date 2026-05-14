@@ -22,3 +22,12 @@ loginForm.addEventListener('submit', function(event) {
         alert("E-mail ou senha incorretos.");
     }
 });
+
+const btnPrompt = document.getElementById('btn-prompt');
+
+btnPrompt.addEventListener('click', function() {
+    const resposta = prompt("O que você achou do projeto até agora?");
+    if(resposta) {
+        alert(`Obrigado pelo feedback! Você disse: "${resposta}".`);
+    }
+});
