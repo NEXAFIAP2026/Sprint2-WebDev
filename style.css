@@ -1,64 +1,172 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #363639; 
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #fff;
     margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh; 
+    align-items: center;
+    min-height: 100vh;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.container {
-    width: 90%; 
-    max-width: 600px;
-    background: white;
-    padding: 30px; 
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
-}
-
-input, button {
-    padding: 10px;
-    margin: 10px 0;
+#login-form input {
     width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
 }
 
-button {
-    background-color: #333;
-    color: white;
-    cursor: pointer;
+#login-form input:focus {
+    outline: none;
+    border-color: #00bcd4;
+}
+
+#login-form button {
+    width: 100%;
+    background: #00bcd4;
+    color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#login-form button:hover {
+    background: #0097a7;
+
+}
+.container {
+    background: #fff;
+    color: #000;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.ia-box {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.grid-estilos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.chip {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
     font-weight: bold;
 }
 
-button:hover {
-    background-color: #555;
+.chip:hover { background: #e0e0e0; }
+
+.botao-comando {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-#app-section {
-    display: none;
-}
-
-hr {
-    margin: 20px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
-}
-
-slider {
-    text-align: center;
+.moldura {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
     margin-top: 20px;
 }
 
-.slider img {
-    max-width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto 15px auto;
+#foto-principal {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-foto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.botao-salvar {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-salvar:hover {
+    background: #0097a7;
+}
+
+.cabecalho-nexa {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Estilos do Slideshow */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 188, 212, 0.8); /* Fica azulzinho ao passar o mouse */
+}
+
+#btn-prev {
+    left: 10px;
+}
+
+#btn-next {
+    right: 10px;
 }

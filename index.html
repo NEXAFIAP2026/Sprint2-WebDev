@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nexa - Assistente de Imagem</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
     <div id="login-section">
-        <h2>Área Restrita (Login)</h2>
+        <h2>Nexa | Login</h2>
         <form id="login-form">
             <input type="email" id="email" placeholder="E-mail (aluno@fiap.com.br)" required>
             <input type="password" id="password" placeholder="Senha (1234)" required>
-            <button type="submit">Entrar</button>
+            <button type="submit">Acessar Assistente</button>
         </form>
     </div>
 
-    <div id="app-section">
-        <h2 id="welcome-message"></h2>
-        <button id="btn-prompt">Avalie a Sprint</button>
-
-        <hr>
+    <div id="app-section" style="display: none;">
+        <div class="cabecalho-nexa">
+            <h2 style="margin:0;">Nexa</h2>
+            <p style="margin: 5px 0 0 0; color: #00bcd4;">Assistente de imagem</p>
+        </div>
         
-        <div class="slider">
-            <h3>Slideshow de Gatos</h3>
-            <img id="slide-img" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop" alt="Gato">
-            <button id="btn-next">Próximo Gatinho</button>
+        <div class="ia-box">
+            <p>Olá! Sou a Nexa. Escolha um estilo para a sua foto:</p>
+            
+            <div class="grid-estilos">
+                <button class="chip" onclick="aplicarEfeito('vibrante')">🌈 Vibrante</button>
+                <button class="chip" onclick="aplicarEfeito('sombrio')">🌫️ Sombrio</button>
+                <button class="chip" onclick="aplicarEfeito('quente')">☀️ Quente</button>
+                <button class="chip" onclick="aplicarEfeito('esverdeado')">🌿 Esverdeado</button>
+            </div>
+        </div>
+
+       <div class="display-foto">
+            <div class="moldura">
+                <button id="btn-prev" class="nav-btn">◀</button>
+                
+                <img id="foto-principal" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Paisagem original">
+                
+                <button id="btn-next" class="nav-btn">▶</button>
+                
+                <div id="loading" class="overlay">Nexa ajustando parâmetros...</div>
+            </div>
+            
+            <div class="rodape-foto">
+                <p id="status-filtro">Estilo atual: <strong>Original</strong></p>
+                <button id="btn-salvar" class="botao-salvar">📥 Salvar na Galeria</button>
+            </div>
         </div>
     </div>
 </div>
